@@ -57,11 +57,33 @@ Kalman filter algorithm consists of two stages: prediction and update. Note that
 | Predicted Error Covariance | Show file differences that haven't been staged |
 
 
-## Example:
+## Example
+
+### Problem 
+We want to estimate the production of electricity using Kalman Filter with the following parameters: F = 1, H = -350, Q = 0.3, R = 0.2, s = 400 and initial conditions x0 = 1.1, p0 = 0.1.
+
+Write a program that for one week calculates and plans the actual and estimated electricity production:
+
+1. using a time-invariant Kalman filter
+2. using a steady state Kalman filter
+
+In addition, write a program that calculates and displays the average absolute error in terms of actual power generation for the two filters. For which filter do you notice a smaller deviation of the estimate from the actual electricity production? 
+
+
+### Results
+
+
+The following image depicts the real and estimated electricity generation, using different types of Kalman filters.
 
 ![untitled2](https://user-images.githubusercontent.com/47864776/175816833-57f43205-52bb-4222-881f-7041ec39560e.png)
 
 
+The following image depicts the results of the mean absolute percentage calculations of the actual power generation of the two filters.
+
+![Screenshot](https://user-images.githubusercontent.com/47864776/175818107-579b584c-0ab0-4e0a-8a4f-2755eb2a8e1e.png)
+
+
+Based on the above results, we observe that the estimates of the two different techniques are equivalent.
 
 
 
